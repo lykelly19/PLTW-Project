@@ -1,5 +1,9 @@
+Currently working on:
+- making blocks occur less frequently by counting seconds
+
 Revisions made so far: 
 - Added Chrome dino sprite and resized it to fit the canvas
+- Fixed the random heights and y-pos of obstacles
 
 Potential Future Changes: 
 - change the dinosaur color? 
