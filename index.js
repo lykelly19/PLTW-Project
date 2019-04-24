@@ -72,10 +72,7 @@ function draw() {
             groundSprites.add(firstGroundSprite);
         }
 
-        if (initTime > 56){
-           initTime = 0;
-        }
-        if (random() > 0.5 && second() - initTime > 1 || initTime - ) {
+        if (random() > 0.3 && second() - initTime > 2) {
             initTime = second();
             var randHeight = random(20,50);
             var obstacle = createSprite(camera.position.x + width, height-50-(randHeight/2), 20, randHeight); //random height
