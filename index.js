@@ -72,6 +72,9 @@ function draw() {
             groundSprites.add(firstGroundSprite);
         }
 
+        if(initTime > 56){
+          initTime = 0;
+        }
         if (random() > 0.3 && second() - initTime > 2) {
             initTime = second();
             var randHeight = random(20,50);
