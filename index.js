@@ -75,7 +75,7 @@ function draw() {
         }
 
         if (random() > 0.97) {
-            var obstacle = createSprite(camera.position.x + width, random(0, (height-50)-15), 30, 30);
+            var obstacle = createSprite(camera.position.x + width, height-75, 30, random(20,50));
             obstacleSprites.add(obstacle);
         }
 
