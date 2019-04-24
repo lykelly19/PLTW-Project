@@ -1,0 +1,7 @@
+Revisions made so far: 
+- Added Chrome dino sprite and resized it to fit the canvas
+
+Potential Future Changes: 
+- change the dinosaur color? 
+- make the blocks occur less frequently
+- change the blocks into some other sprite (ex. trees)
