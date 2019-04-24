@@ -9,7 +9,7 @@
     var isGameOver;
     var score;
 
-
+    var initTime;
     var GRAVITY = 0.3;
     var JUMP = -5;
 
@@ -30,6 +30,7 @@
     function setup() {
         isGameOver = false;
         score = 0;
+        initTime = second();
 
         createCanvas(400, 300);
         background(150, 200, 250);
@@ -44,7 +45,7 @@
 
         player = createSprite(100, height-75, 50, 50);
         player.addImage(playerImage);
-        
+
         obstacleSprites = new Group();
     }
 
@@ -79,9 +80,10 @@
                 groundSprites.add(firstGroundSprite);
             }
 
-            if (random() > 0.95) {
-                var randomNum = random()*100;
-                var obstacle = createSprite(camera.position.x + width, height-50-(randomNum/2), 30, randomNum);
+            if (random() > 0.95 && second() - initTime > 3) {
+                initTime = second();
+                var randHeight = random(20,50);
+                var obstacle = createSprite(camera.position.x + width, height-50-(randHeight/2), 20, randHeight); //random height
                 obstacleSprites.add(obstacle);
             }
 
