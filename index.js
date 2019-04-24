@@ -4,6 +4,7 @@ var score;
 var GRAVITY = 0.3;
 var JUMP = -5;
 
+var initTime;
 var groundSprites;
 var GROUND_SPRITE_WIDTH = 50;
 var GROUND_SPRITE_HEIGHT = 50;
@@ -14,17 +15,14 @@ var playerImage;
 
 var obstacleSprites;
 
-var initTime = second();
-
 function preload(){
   playerImage = loadImage("chrome_dino.png");
 }
 
-// http://coursescript.com/notes/interactivecomputing/images/
-
 function setup() {
     isGameOver = false;
     score = 0;
+    initTime = second();
 
     createCanvas(400, 300);
     background(150, 200, 250);
@@ -34,8 +32,6 @@ function setup() {
 
     for (var n = 0; n < numGroundSprites; n++) {
         var groundSprite = createSprite(n*50, height-25, GROUND_SPRITE_WIDTH, GROUND_SPRITE_HEIGHT);
-
-
         groundSprites.add(groundSprite);
     }
 
@@ -76,7 +72,7 @@ function draw() {
             groundSprites.add(firstGroundSprite);
         }
 
-        if (random() > 0.90 && second() - initTime > 3) {
+        if (random() > 0.3 && second() - initTime > 2) {
             initTime = second();
             var randHeight = random(20,50);
             var obstacle = createSprite(camera.position.x + width, height-50-(randHeight/2), 20, randHeight); //random height
