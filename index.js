@@ -12,8 +12,6 @@ var numGroundSprites;
 var player;
 var playerImage;
 
-var randNum = 0;
-
 var obstacleSprites;
 
 function preload(){
@@ -69,7 +67,7 @@ function draw() {
         player.position.x = player.position.x + 5;
         camera.position.x = player.position.x + (width/4);
 
-        var firstGroundSprite = groundSprites[0];
+        var firstGroundSprite = groundSprites[0];   // ground
         if (firstGroundSprite.position.x <= camera.position.x - (width/2 + firstGroundSprite.width/2)) {
             groundSprites.remove(firstGroundSprite);
             firstGroundSprite.position.x = firstGroundSprite.position.x + numGroundSprites*firstGroundSprite.width;
@@ -77,8 +75,8 @@ function draw() {
         }
 
         if (random() > 0.97) {
-            randNum = random()*30;
-            var obstacle = createSprite(camera.position.x + width, height-50-randNum, 10, randNum); //random height
+            var rand = 40;
+            var obstacle = createSprite(camera.position.x + width, height-50-(40/2), 30, 40); //random height
             obstacleSprites.add(obstacle);
         }
 
