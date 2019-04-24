@@ -15,6 +15,9 @@ var playerImage;
 var obstacleSprites;
 
 var initTime = second();
+if(initTime == 57 || initTime == 58 || initTime == 59){
+  initTime = 0;
+}
 
 function preload(){
   playerImage = loadImage("chrome_dino.png");
@@ -76,7 +79,7 @@ function draw() {
             groundSprites.add(firstGroundSprite);
         }
 
-        if (random() > 0.95 && second() - initTime > 3) {
+        if (random() > 0.95 && second() - initTime > 3 || ) {
             initTime = second();
             var randHeight = random(20,50);
             var obstacle = createSprite(camera.position.x + width, height-50-(randHeight/2), 20, randHeight); //random height
