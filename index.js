@@ -46,10 +46,11 @@ function draw() {
         background(0);
         fill(255);
         textAlign(CENTER);
+        textFont(20);
         text("Your score was: " + score, camera.position.x, camera.position.y - 20);
         text("Game Over! Click anywhere to restart", camera.position.x, camera.position.y);
     } else {
-        background(150, 200, 250);
+        background(207, 250, 253);
 
         player.velocity.y = player.velocity.y + GRAVITY;
 
