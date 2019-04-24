@@ -15,9 +15,6 @@ var playerImage;
 var obstacleSprites;
 
 var initTime = second();
-if(initTime == 57 || initTime == 58 || initTime == 59){
-  initTime = 0;
-}
 
 function preload(){
   playerImage = loadImage("chrome_dino.png");
@@ -77,6 +74,10 @@ function draw() {
             groundSprites.remove(firstGroundSprite);
             firstGroundSprite.position.x = firstGroundSprite.position.x + numGroundSprites*firstGroundSprite.width;
             groundSprites.add(firstGroundSprite);
+        }
+
+        if(initTime >= 57){
+          initTime = 0;
         }
 
         if (random() > 0.95 && second() - initTime > 3 || ) {
