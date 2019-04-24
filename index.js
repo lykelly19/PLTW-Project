@@ -12,7 +12,7 @@ var numGroundSprites;
 var player;
 var playerImage;
 
-var randNum;
+var randNum = 0;
 
 var obstacleSprites;
 
@@ -78,7 +78,7 @@ function draw() {
 
         if (random() > 0.97) {
             randNum = random()*30;
-            var obstacle = createSprite(camera.position.x + width, height-50-randNum, 10, random()*10); //random height
+            var obstacle = createSprite(camera.position.x + width, height-50-randNum, 10, randNum); //random height
             obstacleSprites.add(obstacle);
         }
 
