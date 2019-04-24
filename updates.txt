@@ -1,12 +1,12 @@
 Currently working on:
-- making blocks occur less frequently by counting seconds
+- adding clouds
 
 Revisions made so far: 
 - Added Chrome dino sprite and resized it to fit the canvas
 - Fixed the random heights and y-pos of obstacles
+- making blocks occur less frequently by counting seconds
 
 Potential Future Changes: 
 - change the dinosaur color? 
-- make the blocks occur less frequently
 - change the blocks into some other sprite (ex. trees)
 - organize the repository by adding src and img folders (might need to change path of chrome_dino.png in index.js if so) 
