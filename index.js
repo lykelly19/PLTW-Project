@@ -14,7 +14,7 @@ var playerImage;
 
 var obstacleSprites;
 
-var initTime = 0;
+var initTime = second();
 
 function preload(){
   playerImage = loadImage("chrome_dino.png");
