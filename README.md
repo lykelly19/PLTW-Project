@@ -1,1 +1,1 @@
-# Dinosaur Game (lykelly19.github.io)
+# Dinosaur Game 
